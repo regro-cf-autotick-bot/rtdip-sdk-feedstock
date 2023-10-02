@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rtdip-sdk-{{ version }}.tar.gz
-  sha256: cc88fb6ed5737bc9f3b9dd3b358875d8dca5e012750bae44c159cfc905de293a
+  sha256: cc88fb6ed5737bc9f3b9dd3b358875d8dca5e012750bae44c159cfc905de293a 
 
 build:
   noarch: python
