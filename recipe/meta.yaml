@@ -1,5 +1,5 @@
 {% set name = "rtdip-sdk" %}
-{% set version = "0.7.11" %}
+{% set version = "0.7.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rtdip-sdk-{{ version }}.tar.gz
-  sha256: cc88fb6ed5737bc9f3b9dd3b358875d8dca5e012750bae44c159cfc905de293a
+  sha256: 7545366a9bf3c7f9355bd4a1ffe645c2ef234322740387445f78f91ae1e60314
 
 build:
   noarch: python
@@ -36,7 +36,7 @@ requirements:
     - grpcio >=1.48.1
     - grpcio-status >=1.48.1
     - googleapis-common-protos >=1.56.4
-    - langchain ==0.0.268
+    - langchain ==0.0.291
     - openai ==0.27.8
 
 test:
