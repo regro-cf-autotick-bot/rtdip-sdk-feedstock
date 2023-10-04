@@ -1,5 +1,5 @@
 {% set name = "rtdip-sdk" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rtdip-sdk-{{ version }}.tar.gz
-  sha256: 930b72f48ba7e397cc4cfdceb64433b8bab6986facf64d8eff5342eecd075abe
+  sha256: f6b2f1bf9bbfa01a9c2c0744b96fc6cd0d5ed2fce8d3a73356b910a2118d6990
 
 build:
   noarch: python
