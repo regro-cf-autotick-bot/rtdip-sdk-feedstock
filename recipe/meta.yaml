@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rtdip-sdk-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rtdip-sdk-{{ version }}.tar.gz
   sha256: aa4338c72807a63c82265ac2dea9f64b45704b166bf3e6abda3ff02b8f2d47dc
 
 build:
@@ -15,16 +15,16 @@ build:
   script_env:
     - RTDIP_SDK_NEXT_VER={{ version }}
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python {{ python_min }}
     - pip
     - setuptools_scm
     - pytest-runner
   run:
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - databricks-sql-connector ==2.9.3
     - azure-identity ==1.12.0
     - pyodbc ==4.0.39
@@ -47,6 +47,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://www.rtdip.io/
